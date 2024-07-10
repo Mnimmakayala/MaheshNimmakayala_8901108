@@ -48,4 +48,17 @@ time.sleep(10)
 #CLose the popup
 close_popup = driver.find_element("xpath","//*[@id='mat-dialog-title-0']/span")
 close_popup.click()
+time.sleep(4)
+
+#Get the flight details from search
+from_to_details = driver.find_element("xpath","//*[@id='headerMainContent']/div/availability-page/kilo-flight-search-header-pres/div/div/div[2]/div/div/h2")
+print("Flight Details:")
+print(from_to_details.get_attribute("innerText"))
+
+disclaimer = driver.find_element("xpath","//*[@id='headerMainContent']/div/availability-page/kilo-flight-search-header-pres/div/div/div[3]")
+print("Disclaimer:")
+print(disclaimer.get_attribute("innerText"))
+
+total_result = driver.find_element("xpath","//*[@id='upsell-header']/div[1]/div")
+print(total_result.get_attribute("innerText"))
 
