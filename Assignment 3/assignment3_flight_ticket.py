@@ -40,7 +40,7 @@ date_dropdown = driver.find_element("xpath","//*[@id='bkmgFlights_travelDates_1-
 date_dropdown.click()
 time.sleep(1)
 
-Click on the submit button
+#Click on the submit button
 trip_submit = driver.find_element("xpath","//*[@id='bkmgFlights_findButton']/abc-ripple/div")
 trip_submit.click()
 time.sleep(10)
